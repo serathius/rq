@@ -284,7 +284,7 @@ class Queue(object):
             pipe.execute()
 
         if self._async:
-            self.push_job_id(job.id, at_front=at_front)
+            self.push_job_id(job.id, at_front=at_front, pipeline=pipeline)
 
         return job
 
